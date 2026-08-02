@@ -1,0 +1,10 @@
+[user]
+showPreviews=true
+middleButtonBehavior=2
+indicatorStyle=3
+inactiveIndicatorStyle=1
+indicatorOrientation=2
+indicatorColor=rgb(98,160,234)
+inactiveColor=rgb(154,153,150)
+pinned=xfce4-terminal;firefox-esr;thunderbird;thunar;org.keepassxc.KeePassXC;xfce-settings-manager;
+keyComboActive=true

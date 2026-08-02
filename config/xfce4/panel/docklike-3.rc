@@ -1,0 +1,9 @@
+[user]
+onlyDisplayVisible=true
+showPreviews=true
+middleButtonBehavior=2
+indicatorStyle=3
+inactiveIndicatorStyle=1
+indicatorOrientation=3
+indicatorColor=rgb(98,160,234)
+inactiveColor=rgb(154,153,150)

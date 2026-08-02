@@ -1,0 +1,320 @@
+# ==============================================================================
+# ~/.nethackrc
+# ==============================================================================
+
+# Autopickup
+# ------------------
+
+OPTIONS=autopickup
+OPTIONS=pickup_burden:B
+OPTIONS=pickup_thrown
+OPTIONS=pickup_types:$"%/*
+
+AUTOPICKUP_EXCEPTION="<wand .* wish"
+AUTOPICKUP_EXCEPTION="<wand .* create monster"
+AUTOPICKUP_EXCEPTION="<wand .* tele"
+AUTOPICKUP_EXCEPTION="<wand .* poly"
+AUTOPICKUP_EXCEPTION="<wand .* fire"
+AUTOPICKUP_EXCEPTION="<wand .* lightning"
+AUTOPICKUP_EXCEPTION="<wand .* death"
+
+AUTOPICKUP_EXCEPTION="> corpse"
+AUTOPICKUP_EXCEPTION="<lichen corpse" 
+AUTOPICKUP_EXCEPTION="<lizard corpse" 
+AUTOPICKUP_EXCEPTION="<newt corpse"
+AUTOPICKUP_EXCEPTION="<floating eye corpse"
+AUTOPICKUP_EXCEPTION="<wraith corpse"
+
+AUTOPICKUP_EXCEPTION="<magic marker"
+AUTOPICKUP_EXCEPTION="< lamp"
+AUTOPICKUP_EXCEPTION="> oil lamp"
+AUTOPICKUP_EXCEPTION="> lamp .* oil"
+AUTOPICKUP_EXCEPTION="<amulet .* life"
+AUTOPICKUP_EXCEPTION="<athame"
+
+AUTOPICKUP_EXCEPTION="> loadstone"
+AUTOPICKUP_EXCEPTION="<stone called luck"
+AUTOPICKUP_EXCEPTION="< luckstone"
+AUTOPICKUP_EXCEPTION="> rock"
+AUTOPICKUP_EXCEPTION="> gray stone"
+AUTOPICKUP_EXCEPTION=">^[a0-9]+ stone"
+AUTOPICKUP_EXCEPTION=">worthless"
+
+AUTOPICKUP_EXCEPTION=">scroll .* scare monster"
+AUTOPICKUP_EXCEPTION=">:0)"
+AUTOPICKUP_EXCEPTION=">wand .* cold$"
+AUTOPICKUP_EXCEPTION=" named empty"
+AUTOPICKUP_EXCEPTION=" nothing"
+
+# Customization
+# ------------------
+
+OPTIONS=pettype:cat
+OPTIONS=catname:cowardcat
+OPTIONS=dogname:dumbdog
+OPTIONS=horsename:hideoushorse
+
+# Curses
+# ------------------
+
+OPTIONS=windowtype:curses
+OPTIONS=align_message:top,align_status:bottom
+OPTIONS=popup_dialog
+OPTIONS=selectsaved
+OPTIONS=splash_screen
+OPTIONS=windowborders:2
+OPTIONS=petattr:u
+OPTIONS=guicolor
+
+# General
+# ------------------
+
+OPTIONS=acoustics,autodescribe
+OPTIONS=!autodig,autoopen,!autoquiver
+OPTIONS=!blind,!nudist
+OPTIONS=!bones,checkpoint,!legacy,!mail,!news
+OPTIONS=!clicklook,!cmdassist,!extmenu,!herecmd_menu
+OPTIONS=travel
+OPTIONS=confirm,safe_pet,paranoid_confirmation:all
+OPTIONS=tombstone
+
+OPTIONS=dark_room,hilite_pet,hilite_pile,lit_corridor,sparkle
+OPTIONS=runmode:walk
+
+OPTIONS=packorder:$"=)[%?!/(+*`0_
+OPTIONS=fixinv,force_invmenu,perm_invent
+OPTIONS=menustyle:full
+OPTIONS=sortloot:full,sortpack
+
+# Keybinds
+# ------------------
+
+BIND=!:loot,^v:untrap
+
+# Menucolors
+# ------------------
+
+OPTIONS=menucolors
+
+MENUCOLOR=" !!DANGER!!"=orange&underline
+MENUCOLOR=" Stormbringer \(weapon in hand\)"=orange&inverse
+MENUCOLOR=" \(lit\)"=yellow&inverse
+MENUCOLOR=" \(wielded\)"=cyan&inverse
+MENUCOLOR=" blessed .* \(wielded\)"=green&inverse
+MENUCOLOR=" cursed .* \(wielded\)"=red&inverse
+
+MENUCOLOR=" named B .* worn"=green&inverse
+MENUCOLOR=" named B .* hand"=green&inverse
+MENUCOLOR=" named C .* worn"=red&inverse
+MENUCOLOR=" named C .* hand"=red&inverse
+
+# vegan
+MENUCOLOR="(food |cram |K-|C-)ration|gunyoki"=green&bold
+MENUCOLOR="lembas wafer|melon|carrot|tins? .* spinach"=green&bold
+MENUCOLOR=" oranges?( named.*)?$"=green&bold
+MENUCOLOR=" pears?( named.*)?$"=green&bold
+MENUCOLOR=" (apple|banana|kelp|eucalyptus|garlic|wolfsbane)"=green&bold
+MENUCOLOR=" (slime mold|brain)"=green&bold
+MENUCOLOR="(tins? of )?(gelatinous cube|acid blob|quivering blob)( corpse)?"=green&bold
+MENUCOLOR="(tins? of )?(blue|spotted|ochre) jelly( corpse)?"=green&bold
+MENUCOLOR="(tins? of )?lichen|shrieker|violet fungus|(brown|yellow|green|red) mold( corpse)?"=green&bold
+
+# vegetarian
+MENUCOLOR="egg|pancake|fortune cookie|candy bar|royal jelly|cream pie|candle"=green
+MENUCOLOR="(tin of )?brown pudding|gray ooze( corpse)?"=green
+
+MENUCOLOR=" bag .* holding"=magenta
+MENUCOLOR=" luck(stone)?($| )"=magenta
+MENUCOLOR=" wand .* wish(ing)?($| )"=magenta
+MENUCOLOR=" wand .* tele(port(ation)?)?($| )"=magenta
+MENUCOLOR=" wand .* polymorph"=magenta
+MENUCOLOR=" wand .* death"=magenta
+MENUCOLOR=" gain level"=magenta
+MENUCOLOR=" full healing"=magenta
+MENUCOLOR=" magic marker"=magenta
+MENUCOLOR=" magic lamp|lamp .* magic"=magenta
+MENUCOLOR=" unicorn horn[^[]*$"=magenta
+MENUCOLOR=" tinning kit"=magenta
+MENUCOLOR=" ring .* regen(eration)?($| )"=magenta
+MENUCOLOR=" ring .* conflict"=magenta
+MENUCOLOR=" ring .* (FA|free action)($| )"=magenta
+MENUCOLOR=" ring .* (TC|teleport control)($| )"=magenta
+MENUCOLOR=" ring .* lev(itation)?($| )"=magenta
+MENUCOLOR=" scrolls? .* genocide($| )"=magenta
+MENUCOLOR=" scrolls? .* charging($| )"=magenta
+MENUCOLOR=" scrolls? .* identify($| )"=magenta
+MENUCOLOR=" amulet .* (life ?saving|LS)($| )"=magenta
+MENUCOLOR=" amulet .* ref(lection)?($| )"=magenta
+MENUCOLOR=" c(o|hi)ckatrice (corpse|egg)"=magenta
+MENUCOLOR=" egg .* cockatrice"=magenta
+MENUCOLOR=" stethoscope"=magenta
+
+#instruments
+MENUCOLOR="tooled horn|fire horn|frost horn|horn .* (tooled|fire|frost)"=magenta
+MENUCOLOR=" harp"=magenta
+MENUCOLOR=" bugle"=magenta
+MENUCOLOR=" flute"=magenta
+
+# unidentified magic armor
+MENUCOLOR="piece of cloth|opera cloak|ornamental cope|tattered cape"=magenta
+MENUCOLOR="plumed helmet|etched helmet|crested helmet|visored helmet"=magenta
+MENUCOLOR="(old|padded|riding|fencing) gloves"=magenta
+MENUCOLOR="(mud|buckled|riding|snow|hiking|combat|jungle) boots"=magenta
+
+#unaligned
+MENUCOLOR=" (Dragonbane|Fire Brand|Frost Brand|Ogresmasher|Trollsbane|Werebane)"=lightgreen
+
+#lawful normal, quest
+MENUCOLOR=" (Demonbane|Excalibur|Grayswandir|Snickersnee|Sunsword)"=lightgreen
+MENUCOLOR=" (Orb of Detection|Sceptre of Might|Magic Mirror of Merlin|Mitre of Holiness|Tsurugi of Muramasa)"=lightgreen
+
+#neutral normal, quest
+MENUCOLOR=" (Cleaver|Giantslayer|Magicbane|Mjollnir|Vorpal Blade)"=lightgreen
+MENUCOLOR=" (Heart of Ahriman|Staff of Aesculapius|Eyes of the Overworld|Platinum Yendorian Express Card|Orb of Fate|Eye of the Aethiopica)"=lightgreen
+
+#chaotic normal, quest
+MENUCOLOR=" (Grimtooth|Orcrist|Sting|Stormbringer)"=lightgreen
+MENUCOLOR=" (Longbow of Diana|Master Key of Thievery)"=lightgreen
+
+#invocation items
+MENUCOLOR=" (Bell of Opening|silver bell|Candelabrum of Invocation|candelabrum|Book of the Dead|papyrus spellbook)"=magenta&bold
+
+#raison d'etre
+MENUCOLOR=" Amulet of Yendor named"=magenta&bold
+
+MENUCOLOR=" cursed.* bag .* holding"=red&bold
+MENUCOLOR=" cursed.* luck(stone)?($| )"=red&bold
+MENUCOLOR=" cursed.* unicorn horn"=red&bold
+MENUCOLOR=" cursed.* (Bell of Opening|silver bell|Candelabrum of Invocation|candelabrum|Book of the Dead|papyrus spellbook)"=red&bold
+MENUCOLOR="cursed tins? .* spinach|tins? .* spinach .* (cursed|C($| ))"=red
+MENUCOLOR=" load(stone)?($| )"=red&underline
+
+MENUCOLOR=" bag .* tricks"=blue&underline
+MENUCOLOR=" wand .*[^!]canc"=blue&underline
+MENUCOLOR=" wand .* vanish"=blue&underline
+
+MENUCOLOR=" gold piece"=yellow
+MENUCOLOR=" valuable"=orange
+MENUCOLOR=" gems? .* hard"=yellow
+
+#soft gems
+MENUCOLOR=" ([0-9]+|an?|gems? .*) (uncursed |cursed |blessed )?(dilithium|opal|garnet|jasper|agate|jet|obsidian|jade|citrine|chrysoberyl|amber|amethyst|fluorite|turquoise)(e?s)?( stones?| gems?| crystals?)?( named .*)?$"=orange
+
+#hard gems
+MENUCOLOR=" ([0-9]+|an?|gems?.*) (uncursed |cursed |blessed )?(diamond|rub(y|ies)|jacinth|sapphire|black opal|emerald|topaz|aquamarine)(e?s)?( stones?| gems?)?( named .*)?$"=yellow
+
+MENUCOLOR=" 0%"=white
+MENUCOLOR=" [1-9]%"=cyan
+MENUCOLOR=" [12][0-9]%"=cyan
+MENUCOLOR=" [3-6][0-9]%"=yellow
+MENUCOLOR=" 7[0-5]%"=yellow
+MENUCOLOR=" 7[6-9]%"=orange
+MENUCOLOR=" 8[0-9]%"=orange
+MENUCOLOR=" 9[0-9]%"=red
+MENUCOLOR=" 100%"=red
+MENUCOLOR="[a-zA-Z ]+ [0-9]\*   [a-z]+ +[0-9]+%"=magenta
+
+MENUCOLOR="^ +[a-z -]+ +\[(Unskilled|Basic|Skilled|Expert|Master|Grand Master)\]$"=white
+MENUCOLOR="^ *[a-z] - +[a-z -]+ +\[(Unskilled|Basic|Skilled|Expert|Master|Grand Master)\]$"=green
+MENUCOLOR="^ +\* +[a-z -]+ +\[(Unskilled|Basic|Skilled|Expert|Master|Grand Master)\]$"=yellow
+MENUCOLOR="^ +# +[a-z -]+ +\[(Unskilled|Basic|Skilled|Expert|Master|Grand Master)\]$"=magenta
+
+MENUCOLOR=" is empty. Do what?"=white
+MENUCOLOR="Put something into .*"=white
+MENUCOLOR="Take something out of .*"=white
+
+MENUCOLOR="unicorn horn.*(Unskilled|Basic|Skilled|Expert)"=white
+MENUCOLOR="Info on what a given key does."=white
+MENUCOLOR="Full list of keyboard commands."=white
+MENUCOLOR="altkeyhandler"=white
+MENUCOLOR="fruit.*\["=white
+
+MENUCOLOR=" (cursed|named C)($| )"=red
+MENUCOLOR=" (uncursed|named U)($| )"=white
+MENUCOLOR=" (blessed|named B)($| )"=green
+
+MENUCOLOR=" holy water"=cyan&bold
+MENUCOLOR=" blessed clear potion"=cyan&bold
+MENUCOLOR=" blessed potions? called water"=cyan&bold
+MENUCOLOR=" clear potions? named (holy|blessed|B)($| )"=cyan&bold
+MENUCOLOR=" potions? of water named (holy|blessed|B)($| )"=cyan&bold
+MENUCOLOR=" potions? called water named (holy|blessed|B)($| )"=cyan&bold
+MENUCOLOR=" unholy water"=orange&bold
+MENUCOLOR=" cursed clear potion"=orange&bold
+MENUCOLOR=" cursed potions? called water"=orange&bold
+MENUCOLOR=" potions? called water named (unholy|cursed|C)($| )"=orange&bold
+
+MENUCOLOR="^worn"=white&inverse
+MENUCOLOR=" worn"=white&inverse
+MENUCOLOR="^blessed .* worn"=green&inverse
+MENUCOLOR=" blessed .* worn"=green&inverse
+# MENUCOLOR="^cursed .* worn"=red&inverse
+MENUCOLOR="^cursed .* \(being worn\)"=red&inverse
+MENUCOLOR=" cursed .* \(being worn\)"=red&inverse
+
+MENUCOLOR=" hand"=white&inverse
+MENUCOLOR=" blessed .* hand"=green&inverse
+MENUCOLOR=" cursed .* hand"=red&inverse
+MENUCOLOR="^hand"=white&inverse
+MENUCOLOR="^blessed .* hand"=green&inverse
+MENUCOLOR="^cursed .* hand"=red&inverse
+
+# Messages
+# ------------------
+
+OPTIONS=msghistory:60
+OPTIONS=msg_window:reversed
+
+# Statusbar
+# ------------------
+
+OPTIONS=hitpointbar,status_updates
+OPTIONS=statushilites:2
+OPTIONS=statuslines:3
+OPTIONS=showexp,showscore,time
+
+OPTIONS=hilite_status:characteristics/<5/red
+OPTIONS=hilite_status:characteristics/>6/orange
+OPTIONS=hilite_status:characteristics/>9/yellow
+OPTIONS=hilite_status:characteristics/>12/green
+OPTIONS=hilite_status:characteristics/>16/cyan
+OPTIONS=hilite_status:characteristics/>18/lightblue
+
+OPTIONS=hilite_status:carrying-capacity/burdened/yellow
+OPTIONS=hilite_status:carrying-capacity/stressed/orange
+OPTIONS=hilite_status:carrying-capacity/strained/orange&underline
+OPTIONS=hilite_status:carrying-capacity/overtaxed/red&underline
+OPTIONS=hilite_status:carrying-capacity/overloaded/red&blink
+
+OPTIONS=hilite_status:gold/always/yellow
+
+OPTIONS=hilite_status:power-max/always/magenta
+OPTIONS=hilite_status:power/100%/magenta
+OPTIONS=hilite_status:power/<100%/lightblue
+OPTIONS=hilite_status:power/<60%/cyan
+OPTIONS=hilite_status:power/<30%/white
+
+OPTIONS=hilite_status:experience-level/always/green&bold
+OPTIONS=hilite_status:experience/always/green
+
+OPTIONS=hilite_status:hunger/0/yellow
+OPTIONS=hilite_status:hunger/2/yellow
+OPTIONS=hilite_status:hunger/3/red
+OPTIONS=hilite_status:hunger/4/red&blink
+
+OPTIONS=hilite_status:hitpoints-max/always/green&bold
+OPTIONS=hilite_status:hitpoints/100%/green&bold
+OPTIONS=hilite_status:hitpoints/<100%/green
+OPTIONS=hilite_status:hitpoints/<75%/yellow
+OPTIONS=hilite_status:hitpoints/<50%/orange
+OPTIONS=hilite_status:hitpoints/<25%/red
+
+# Symbols
+# ------------------
+
+SYMBOLS=S_boulder:0
+SYMBOLS=S_golem:7
+SYMBOLS=S_ghost:8
+SYMBOLS=S_pool:~
+SYMBOLS=S_water:~
+SYMBOLS=S_lava:~
