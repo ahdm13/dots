@@ -69,7 +69,7 @@ OPTIONS=guicolor
 # General
 # ------------------
 
-OPTIONS=acoustics,autodescribe
+OPTIONS=acoustics,autodescribe,!tutorial,!number_pad
 OPTIONS=!autodig,autoopen,!autoquiver
 OPTIONS=!blind,!nudist
 OPTIONS=!bones,checkpoint,!legacy,!mail,!news
