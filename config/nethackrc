@@ -220,9 +220,12 @@ MENUCOLOR=" oranges?"=brightgreen
 MENUCOLOR=" pears?"=brightgreen
 MENUCOLOR=" (apple|banana|kelp|eucalyptus|garlic|wolfsbane)"=brightgreen
 MENUCOLOR=" slime mold"=brightgreen
-MENUCOLOR=" (tins? of )?(gelatinous cube|acid blob|quivering blob)( corpse)?"=brightgreen
-MENUCOLOR=" (tins? of )?(blue|spotted|ochre) jelly( corpse)?"=brightgreen
-MENUCOLOR=" (tins? of )?(lichen|shrieker|violet fungus|(brown|yellow|green|red) mold)( corpse)?"=brightgreen
+MENUCOLOR=" tins? of (gelatinous cube|acid blob|quivering blob)"=brightgreen
+MENUCOLOR=" tins? of (blue|spotted|ochre) jelly"=brightgreen
+MENUCOLOR=" tins? of (lichen|shrieker|violet fungus|(brown|yellow|green|red) mold)"=brightgreen
+MENUCOLOR=" (gelatinous cube|acid blob|quivering blob) corpse"=brightgreen
+MENUCOLOR=" (blue|spotted|ochre) jelly corpse"=brightgreen
+MENUCOLOR=" (lichen|shrieker|violet fungus|(brown|yellow|green|red) mold) corpse"=brightgreen
 
 MENUCOLOR=" ((food |cram |K-|C-)ration|gunyoki) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightgreen&inverse
 MENUCOLOR=" (lembas wafer|melon|carrot|tins? .* spinach) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightgreen&inverse
@@ -230,9 +233,12 @@ MENUCOLOR=" oranges? (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightgreen&inverse
 MENUCOLOR=" pears? (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightgreen&inverse
 MENUCOLOR=" (apple|banana|kelp|eucalyptus|garlic|wolfsbane) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightgreen&inverse
 MENUCOLOR=" slime mold (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightgreen&inverse
-MENUCOLOR=" (tins? of )?(gelatinous cube|acid blob|quivering blob)( corpse)? (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightgreen&inverse
-MENUCOLOR=" (tins? of )?(blue|spotted|ochre) jelly( corpse)? (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightgreen&inverse
-MENUCOLOR=" (tins? of )?(lichen|shrieker|violet fungus|(brown|yellow|green|red) mold)( corpse)? (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightgreen&inverse
+MENUCOLOR=" tins? of (gelatinous cube|acid blob|quivering blob) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightgreen&inverse
+MENUCOLOR=" tins? of (blue|spotted|ochre) jelly (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightgreen&inverse
+MENUCOLOR=" tins? of (lichen|shrieker|violet fungus|(brown|yellow|green|red) mold) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightgreen&inverse
+MENUCOLOR=" (gelatinous cube|acid blob|quivering blob) corpse (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightgreen&inverse
+MENUCOLOR=" (blue|spotted|ochre) jelly corpse (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightgreen&inverse
+MENUCOLOR=" (lichen|shrieker|violet fungus|(brown|yellow|green|red) mold) corpse (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightgreen&inverse
 
 # Vegetarian:
 MENUCOLOR=" (egg|pancake|fortune cookie|candy bar|royal jelly|cream pie|candle)"=brightgreen
