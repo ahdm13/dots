@@ -82,7 +82,7 @@ OPTIONS=dark_room,hilite_pet,hilite_pile,lit_corridor,sparkle
 OPTIONS=runmode:teleport
 
 OPTIONS=packorder:$"=)[%?!/(+*`0_
-OPTIONS=fixinv,force_invmenu,perm_invent
+OPTIONS=fixinv,force_invmenu,perm_invent,perminv_mode:full
 OPTIONS=menustyle:full
 OPTIONS=sortloot:full,sortpack
 
