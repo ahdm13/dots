@@ -216,7 +216,7 @@ MENUCOLOR=" (blessed|named B) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=green&inver
 # Vegan:
 MENUCOLOR=" ((food |cram |K-|C-)ration|gunyoki)"=brightgreen
 MENUCOLOR=" (lembas wafer|melon|carrot|tins? .* spinach)"=brightgreen
-MENUCOLOR=" oranges?"=brightgreen
+MENUCOLOR=" oranges? [^g]"=brightgreen
 MENUCOLOR=" pears?"=brightgreen
 MENUCOLOR=" (apple|banana|kelp|eucalyptus|garlic|wolfsbane)"=brightgreen
 MENUCOLOR=" slime mold"=brightgreen
