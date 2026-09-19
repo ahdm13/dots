@@ -63,7 +63,7 @@ OPTIONS=popup_dialog
 OPTIONS=selectsaved
 OPTIONS=splash_screen
 OPTIONS=windowborders:2
-OPTIONS=petattr:u
+OPTIONS=petattr:underline
 OPTIONS=guicolor
 
 # General
@@ -73,7 +73,7 @@ OPTIONS=acoustics,autodescribe
 OPTIONS=!autodig,autoopen,!autoquiver
 OPTIONS=!blind,!nudist
 OPTIONS=!bones,checkpoint,!legacy,!mail,!news
-OPTIONS=!clicklook,!cmdassist,!extmenu,!herecmd_menu
+OPTIONS=!cmdassist,!extmenu,!herecmd_menu
 OPTIONS=travel
 OPTIONS=confirm,safe_pet,paranoid_confirmation:all
 OPTIONS=tombstone
@@ -318,3 +318,10 @@ SYMBOLS=S_ghost:8
 SYMBOLS=S_pool:~
 SYMBOLS=S_water:~
 SYMBOLS=S_lava:~
+
+# MSGTYPE
+# ------------------
+
+MSGTYPE=norep "THUD!"
+MSGTYPE=stop ".* picks up .* containing .*"
+MSGTYPE=stop ".* drops .* containing .*"
