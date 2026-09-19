@@ -70,6 +70,7 @@ OPTIONS=guicolor
 # ------------------
 
 OPTIONS=acoustics,autodescribe,!tutorial,number_pad:0
+OPTIONS=!tips
 OPTIONS=!autodig,autoopen,!autoquiver
 OPTIONS=!blind,!nudist
 OPTIONS=!bones,checkpoint,!legacy,!mail,!news
@@ -98,166 +99,277 @@ OPTIONS=menucolors
 
 MENUCOLOR=" !!DANGER!!"=orange&underline
 MENUCOLOR=" Stormbringer \(weapon in hand\)"=orange&inverse
-MENUCOLOR=" \(lit\)"=yellow&inverse
-MENUCOLOR=" \(wielded\)"=cyan&inverse
-MENUCOLOR=" blessed .* \(wielded\)"=green&inverse
-MENUCOLOR=" cursed .* \(wielded\)"=red&inverse
 
-MENUCOLOR=" named B .* worn"=green&inverse
-MENUCOLOR=" named B .* hand"=green&inverse
-MENUCOLOR=" named C .* worn"=red&inverse
-MENUCOLOR=" named C .* hand"=red&inverse
+# Unknown BUC:
+MENUCOLOR=" "=white
+MENUCOLOR=" (.* )?(\(wielded\)|\(lit\)|hand|worn)"=white&inverse
 
-# vegan
-MENUCOLOR="(food |cram |K-|C-)ration|gunyoki"=green&bold
-MENUCOLOR="lembas wafer|melon|carrot|tins? .* spinach"=green&bold
-MENUCOLOR=" oranges?( named.*)?$"=green&bold
-MENUCOLOR=" pears?( named.*)?$"=green&bold
-MENUCOLOR=" (apple|banana|kelp|eucalyptus|garlic|wolfsbane)"=green&bold
-MENUCOLOR=" (slime mold|brain)"=green&bold
-MENUCOLOR="(tins? of )?(gelatinous cube|acid blob|quivering blob)( corpse)?"=green&bold
-MENUCOLOR="(tins? of )?(blue|spotted|ochre) jelly( corpse)?"=green&bold
-MENUCOLOR="(tins? of )?lichen|shrieker|violet fungus|(brown|yellow|green|red) mold( corpse)?"=green&bold
-
-# vegetarian
-MENUCOLOR="egg|pancake|fortune cookie|candy bar|royal jelly|cream pie|candle"=green
-MENUCOLOR="(tin of )?brown pudding|gray ooze( corpse)?"=green
-
+# Unidentified items of interest:
 MENUCOLOR=" bag .* holding"=magenta
-MENUCOLOR=" luck(stone)?($| )"=magenta
-MENUCOLOR=" wand .* wish(ing)?($| )"=magenta
-MENUCOLOR=" wand .* tele(port(ation)?)?($| )"=magenta
+MENUCOLOR=" luck(stone)?( |$)"=magenta
+MENUCOLOR=" wand .* wish(ing)?( |$)"=magenta
 MENUCOLOR=" wand .* polymorph"=magenta
 MENUCOLOR=" wand .* death"=magenta
 MENUCOLOR=" gain level"=magenta
 MENUCOLOR=" full healing"=magenta
 MENUCOLOR=" magic marker"=magenta
-MENUCOLOR=" magic lamp|lamp .* magic"=magenta
+MENUCOLOR=" (magic lamp|lamp .* magic)"=magenta
 MENUCOLOR=" unicorn horn[^[]*$"=magenta
 MENUCOLOR=" tinning kit"=magenta
-MENUCOLOR=" ring .* regen(eration)?($| )"=magenta
-MENUCOLOR=" ring .* conflict"=magenta
-MENUCOLOR=" ring .* (FA|free action)($| )"=magenta
-MENUCOLOR=" ring .* (TC|teleport control)($| )"=magenta
-MENUCOLOR=" ring .* lev(itation)?($| )"=magenta
-MENUCOLOR=" scrolls? .* genocide($| )"=magenta
-MENUCOLOR=" scrolls? .* charging($| )"=magenta
-MENUCOLOR=" scrolls? .* identify($| )"=magenta
-MENUCOLOR=" amulet .* (life ?saving|LS)($| )"=magenta
-MENUCOLOR=" amulet .* ref(lection)?($| )"=magenta
+MENUCOLOR=" ring .* regeneration( |$)"=magenta
+MENUCOLOR=" ring .* conflict( |$)"=magenta
+MENUCOLOR=" ring .* free action( |$)"=magenta
+MENUCOLOR=" ring .* teleport control( |$)"=magenta
+MENUCOLOR=" ring .* levitation( |$)"=magenta
+MENUCOLOR=" scrolls? .* genocide( |$)"=magenta
+MENUCOLOR=" scrolls? .* charging( |$)"=magenta
+MENUCOLOR=" scrolls? .* identify( |$)"=magenta
+MENUCOLOR=" amulet .* life saving( |$)"=magenta
+MENUCOLOR=" amulet .* reflection( |$)"=magenta
+MENUCOLOR=" amulet .* magical breathing( |$)"=magenta
 MENUCOLOR=" c(o|hi)ckatrice (corpse|egg)"=magenta
 MENUCOLOR=" egg .* cockatrice"=magenta
 MENUCOLOR=" stethoscope"=magenta
 
-#instruments
-MENUCOLOR="tooled horn|fire horn|frost horn|horn .* (tooled|fire|frost)"=magenta
+MENUCOLOR=" (tooled horn|fire horn|frost horn|horn .* (tooled|fire|frost))"=magenta
 MENUCOLOR=" harp"=magenta
 MENUCOLOR=" bugle"=magenta
 MENUCOLOR=" flute"=magenta
 
-# unidentified magic armor
-MENUCOLOR="piece of cloth|opera cloak|ornamental cope|tattered cape"=magenta
-MENUCOLOR="plumed helmet|etched helmet|crested helmet|visored helmet"=magenta
+MENUCOLOR="(piece of cloth|opera cloak|ornamental cope|tattered cape)"=magenta
+MENUCOLOR="(plumed helmet|etched helmet|crested helmet|visored helmet)"=magenta
 MENUCOLOR="(old|padded|riding|fencing) gloves"=magenta
 MENUCOLOR="(mud|buckled|riding|snow|hiking|combat|jungle) boots"=magenta
 
-#unaligned
-MENUCOLOR=" (Dragonbane|Fire Brand|Frost Brand|Ogresmasher|Trollsbane|Werebane)"=lightgreen
+MENUCOLOR=" (Dragonbane|Fire Brand|Frost Brand|Ogresmasher|Trollsbane|Werebane) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR=" (Demonbane|Excalibur|Grayswandir|Snickersnee|Sunsword) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR=" (Orb of Detection|Sceptre of Might|Magic Mirror of Merlin|Mitre of Holiness|Tsurugi of Muramasa) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR=" (Cleaver|Giantslayer|Magicbane|Mjollnir|Vorpal Blade) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR=" (Heart of Ahriman|Staff of Aesculapius|Eyes of the Overworld|Platinum Yendorian Express Card|Orb of Fate|Eye of the Aethiopica) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR=" (Grimtooth|Orcrist|Sting|Stormbringer) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR=" (Longbow of Diana|Master Key of Thievery) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
 
-#lawful normal, quest
-MENUCOLOR=" (Demonbane|Excalibur|Grayswandir|Snickersnee|Sunsword)"=lightgreen
-MENUCOLOR=" (Orb of Detection|Sceptre of Might|Magic Mirror of Merlin|Mitre of Holiness|Tsurugi of Muramasa)"=lightgreen
+MENUCOLOR=" bag .* holding (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR=" luck(stone)? (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR=" wand .* wish(ing)? (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR=" wand .* polymorph (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR=" wand .* death (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR=" gain level (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR=" full healing (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR=" magic marker (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR=" (magic lamp|lamp .* magic) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR=" unicorn horn[^[]*$ (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR=" tinning kit (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR=" ring .* regeneration (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR=" ring .* conflict (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR=" ring .* free action (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR=" ring .* teleport control (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR=" ring .* levitation (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR=" scrolls? .* genocide (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR=" scrolls? .* charging (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR=" scrolls? .* identify (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR=" amulet .* life saving (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR=" amulet .* reflection (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR=" amulet .* magical breathing (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR=" c(o|hi)ckatrice (corpse|egg) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR=" egg .* cockatrice (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR=" stethoscope (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
 
-#neutral normal, quest
-MENUCOLOR=" (Cleaver|Giantslayer|Magicbane|Mjollnir|Vorpal Blade)"=lightgreen
-MENUCOLOR=" (Heart of Ahriman|Staff of Aesculapius|Eyes of the Overworld|Platinum Yendorian Express Card|Orb of Fate|Eye of the Aethiopica)"=lightgreen
+MENUCOLOR=" (tooled horn|fire horn|frost horn|horn .* (tooled|fire|frost)) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR=" harp (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR=" bugle (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR=" flute (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
 
-#chaotic normal, quest
-MENUCOLOR=" (Grimtooth|Orcrist|Sting|Stormbringer)"=lightgreen
-MENUCOLOR=" (Longbow of Diana|Master Key of Thievery)"=lightgreen
+MENUCOLOR="(piece of cloth|opera cloak|ornamental cope|tattered cape) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR="(plumed helmet|etched helmet|crested helmet|visored helmet) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR="(old|padded|riding|fencing) gloves (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR="(mud|buckled|riding|snow|hiking|combat|jungle) boots (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
 
-#invocation items
+MENUCOLOR=" (Dragonbane|Fire Brand|Frost Brand|Ogresmasher|Trollsbane|Werebane) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR=" (Demonbane|Excalibur|Grayswandir|Snickersnee|Sunsword) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR=" (Orb of Detection|Sceptre of Might|Magic Mirror of Merlin|Mitre of Holiness|Tsurugi of Muramasa) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR=" (Cleaver|Giantslayer|Magicbane|Mjollnir|Vorpal Blade) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR=" (Heart of Ahriman|Staff of Aesculapius|Eyes of the Overworld|Platinum Yendorian Express Card|Orb of Fate|Eye of the Aethiopica) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR=" (Grimtooth|Orcrist|Sting|Stormbringer) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+MENUCOLOR=" (Longbow of Diana|Master Key of Thievery) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=magenta&inverse
+
+# Unidentified items of EXTREME interest:
 MENUCOLOR=" (Bell of Opening|silver bell|Candelabrum of Invocation|candelabrum|Book of the Dead|papyrus spellbook)"=magenta&bold
-
-#raison d'etre
 MENUCOLOR=" Amulet of Yendor named"=magenta&bold
 
-MENUCOLOR=" cursed.* bag .* holding"=red&bold
-MENUCOLOR=" cursed.* luck(stone)?($| )"=red&bold
-MENUCOLOR=" cursed.* unicorn horn"=red&bold
-MENUCOLOR=" cursed.* (Bell of Opening|silver bell|Candelabrum of Invocation|candelabrum|Book of the Dead|papyrus spellbook)"=red&bold
-MENUCOLOR="cursed tins? .* spinach|tins? .* spinach .* (cursed|C($| ))"=red
-MENUCOLOR=" load(stone)?($| )"=red&underline
+MENUCOLOR=" (Bell of Opening|silver bell|Candelabrum of Invocation|candelabrum|Book of the Dead|papyrus spellbook) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightmagenta&inverse
+MENUCOLOR=" Amulet of Yendor named (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightmagenta&inverse
 
+# Uncursed BUC:
+MENUCOLOR=" \+[0-9]+ "=yellow
+MENUCOLOR=" \([0-9]+:[0-9]+\)( |$)"=yellow
+MENUCOLOR=" (uncursed|named UC)( |$)"=yellow
+
+MENUCOLOR=" \+[0-9]+ (.* )?(\(wielded\)|\(lit\)|hand|worn)"=yellow&inverse
+MENUCOLOR=" \([0-9]+:[0-9]+\) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=yellow&inverse
+MENUCOLOR=" (uncursed|named UC) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=yellow&inverse
+
+# Blessed BUC:
+MENUCOLOR=" (blessed|named B)( |$)"=green
+MENUCOLOR=" (blessed|named B) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=green&inverse
+
+# Vegan:
+MENUCOLOR=" ((food |cram |K-|C-)ration|gunyoki)"=brightgreen
+MENUCOLOR=" (lembas wafer|melon|carrot|tins? .* spinach)"=brightgreen
+MENUCOLOR=" oranges?"=brightgreen
+MENUCOLOR=" pears?"=brightgreen
+MENUCOLOR=" (apple|banana|kelp|eucalyptus|garlic|wolfsbane)"=brightgreen
+MENUCOLOR=" slime mold"=brightgreen
+MENUCOLOR=" (tins? of )?(gelatinous cube|acid blob|quivering blob)( corpse)?"=brightgreen
+MENUCOLOR=" (tins? of )?(blue|spotted|ochre) jelly( corpse)?"=brightgreen
+MENUCOLOR=" (tins? of )?(lichen|shrieker|violet fungus|(brown|yellow|green|red) mold)( corpse)?"=brightgreen
+
+MENUCOLOR=" ((food |cram |K-|C-)ration|gunyoki) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightgreen&inverse
+MENUCOLOR=" (lembas wafer|melon|carrot|tins? .* spinach) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightgreen&inverse
+MENUCOLOR=" oranges? (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightgreen&inverse
+MENUCOLOR=" pears? (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightgreen&inverse
+MENUCOLOR=" (apple|banana|kelp|eucalyptus|garlic|wolfsbane) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightgreen&inverse
+MENUCOLOR=" slime mold (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightgreen&inverse
+MENUCOLOR=" (tins? of )?(gelatinous cube|acid blob|quivering blob)( corpse)? (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightgreen&inverse
+MENUCOLOR=" (tins? of )?(blue|spotted|ochre) jelly( corpse)? (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightgreen&inverse
+MENUCOLOR=" (tins? of )?(lichen|shrieker|violet fungus|(brown|yellow|green|red) mold)( corpse)? (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightgreen&inverse
+
+# Vegetarian:
+MENUCOLOR=" (egg|pancake|fortune cookie|candy bar|royal jelly|cream pie|candle)"=brightgreen
+MENUCOLOR=" (tins? of )?(brown pudding|gray ooze)( corpse)?"=brightgreen
+
+MENUCOLOR=" (egg|pancake|fortune cookie|candy bar|royal jelly|cream pie|candle) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightgreen&inverse
+MENUCOLOR=" (tins? of )?(brown pudding|gray ooze)( corpse)? (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightgreen&inverse
+
+# Cursed BUC:
+MENUCOLOR=" (cursed|named C)( |$)"=red
+MENUCOLOR=" (cursed|named C) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=red&inverse
+
+# ARTIFACT items:
+MENUCOLOR=" blessed (.* )?(Dragonbane|Fire Brand|Frost Brand|Ogresmasher|Trollsbane|Werebane)"=brightgreen&bold
+MENUCOLOR=" blessed (.* )?(Demonbane|Excalibur|Grayswandir|Snickersnee|Sunsword)"=brightgreen&bold
+MENUCOLOR=" blessed (.* )?(Orb of Detection|Sceptre of Might|Magic Mirror of Merlin|Mitre of Holiness|Tsurugi of Muramasa)"=brightgreen&bold
+MENUCOLOR=" blessed (.* )?(Cleaver|Giantslayer|Magicbane|Mjollnir|Vorpal Blade)"=brightgreen&bold
+MENUCOLOR=" blessed (.* )?(Heart of Ahriman|Staff of Aesculapius|Eyes of the Overworld|Platinum Yendorian Express Card|Orb of Fate|Eye of the Aethiopica)"=brightgreen&bold
+MENUCOLOR=" blessed (.* )?(Grimtooth|Orcrist|Sting|Stormbringer)"=brightgreen&bold
+MENUCOLOR=" blessed (.* )?(Longbow of Diana|Master Key of Thievery)"=brightgreen&bold
+
+MENUCOLOR=" (Dragonbane|Fire Brand|Frost Brand|Ogresmasher|Trollsbane|Werebane) (.* )?named B( |$)"=brightgreen&bold
+MENUCOLOR=" (Demonbane|Excalibur|Grayswandir|Snickersnee|Sunsword) (.* )?named B( |$)"=brightgreen&bold
+MENUCOLOR=" (Orb of Detection|Sceptre of Might|Magic Mirror of Merlin|Mitre of Holiness|Tsurugi of Muramasa) (.* )?named B( |$)"=brightgreen&bold
+MENUCOLOR=" (Cleaver|Giantslayer|Magicbane|Mjollnir|Vorpal Blade) (.* )?named B( |$)"=brightgreen&bold
+MENUCOLOR=" (Heart of Ahriman|Staff of Aesculapius|Eyes of the Overworld|Platinum Yendorian Express Card|Orb of Fate|Eye of the Aethiopica) (.* )?named B( |$)"=brightgreen&bold
+MENUCOLOR=" (Grimtooth|Orcrist|Sting|Stormbringer) (.* )?named B( |$)"=brightgreen&bold
+MENUCOLOR=" (Longbow of Diana|Master Key of Thievery) (.* )?named B( |$)"=brightgreen&bold
+
+MENUCOLOR=" blessed (.* )?(Dragonbane|Fire Brand|Frost Brand|Ogresmasher|Trollsbane|Werebane) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightgreen&inverse
+MENUCOLOR=" blessed (.* )?(Demonbane|Excalibur|Grayswandir|Snickersnee|Sunsword) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightgreen&inverse
+MENUCOLOR=" blessed (.* )?(Orb of Detection|Sceptre of Might|Magic Mirror of Merlin|Mitre of Holiness|Tsurugi of Muramasa) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightgreen&inverse
+MENUCOLOR=" blessed (.* )?(Cleaver|Giantslayer|Magicbane|Mjollnir|Vorpal Blade) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightgreen&inverse
+MENUCOLOR=" blessed (.* )?(Heart of Ahriman|Staff of Aesculapius|Eyes of the Overworld|Platinum Yendorian Express Card|Orb of Fate|Eye of the Aethiopica) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightgreen&inverse
+MENUCOLOR=" blessed (.* )?(Grimtooth|Orcrist|Sting|Stormbringer) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightgreen&inverse
+MENUCOLOR=" blessed (.* )?(Longbow of Diana|Master Key of Thievery) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightgreen&inverse
+
+MENUCOLOR=" (Dragonbane|Fire Brand|Frost Brand|Ogresmasher|Trollsbane|Werebane) (.* )?named B (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightgreen&inverse
+MENUCOLOR=" (Demonbane|Excalibur|Grayswandir|Snickersnee|Sunsword) (.* )?named B (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightgreen&inverse
+MENUCOLOR=" (Orb of Detection|Sceptre of Might|Magic Mirror of Merlin|Mitre of Holiness|Tsurugi of Muramasa) (.* )?named B (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightgreen&inverse
+MENUCOLOR=" (Cleaver|Giantslayer|Magicbane|Mjollnir|Vorpal Blade) (.* )?named B (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightgreen&inverse
+MENUCOLOR=" (Heart of Ahriman|Staff of Aesculapius|Eyes of the Overworld|Platinum Yendorian Express Card|Orb of Fate|Eye of the Aethiopica) (.* )?named B (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightgreen&inverse
+MENUCOLOR=" (Grimtooth|Orcrist|Sting|Stormbringer) (.* )?named B (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightgreen&inverse
+MENUCOLOR=" (Longbow of Diana|Master Key of Thievery) (.* )?named B (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightgreen&inverse
+
+# EPIC items:
+MENUCOLOR=" blessed bag .* holding (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightmagenta&inverse
+MENUCOLOR=" blessed luck(stone)? (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightmagenta&inverse
+MENUCOLOR=" blessed wand .* wish(ing)? (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightmagenta&inverse
+MENUCOLOR=" blessed wand .* polymorph (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightmagenta&inverse
+MENUCOLOR=" blessed wand .* death (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightmagenta&inverse
+MENUCOLOR=" blessed (magic lamp|lamp .* magic) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightmagenta&inverse
+MENUCOLOR=" blessed ring .* conflict (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightmagenta&inverse
+MENUCOLOR=" blessed ring .* free action (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightmagenta&inverse
+MENUCOLOR=" blessed ring .* teleport control (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightmagenta&inverse
+MENUCOLOR=" blessed amulet .* life saving (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightmagenta&inverse
+MENUCOLOR=" blessed amulet .* reflection (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightmagenta&inverse
+MENUCOLOR=" blessed amulet .* magical breathing (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightmagenta&inverse
+
+MENUCOLOR=" bag .* holding( |.*)named B (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightmagenta&inverse
+MENUCOLOR=" luck(stone)?( |.*)named B (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightmagenta&inverse
+MENUCOLOR=" wand .* wish(ing)?( |.*)named B (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightmagenta&inverse
+MENUCOLOR=" wand .* polymorph( |.*)named B (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightmagenta&inverse
+MENUCOLOR=" wand .* death( |.*)named B (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightmagenta&inverse
+MENUCOLOR=" (magic lamp|lamp .* magic) (.* )?named B (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightmagenta&inverse
+MENUCOLOR=" ring .* conflict (.* )?named B (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightmagenta&inverse
+MENUCOLOR=" ring .* free action (.* )?named B (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightmagenta&inverse
+MENUCOLOR=" ring .* teleport control (.* )?named B (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightmagenta&inverse
+MENUCOLOR=" amulet .* life saving (.* )?named B (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightmagenta&inverse
+MENUCOLOR=" amulet .* reflection (.* )?named B (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightmagenta&inverse
+MENUCOLOR=" amulet .* magical breathing (.* )?named B (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightmagenta&inverse
+
+# Invocations items and the Amulet of Yendor:
+MENUCOLOR=" (Bell of Opening|silver bell|Candelabrum of Invocation|candelabrum|Book of the Dead|papyrus spellbook)"=brightmagenta&bold
+MENUCOLOR=" Amulet of Yendor named"=brightmagenta&bold
+
+MENUCOLOR=" (Bell of Opening|silver bell|Candelabrum of Invocation|candelabrum|Book of the Dead|papyrus spellbook) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightmagenta&inverse
+MENUCOLOR=" Amulet of Yendor named (.* )?(\(wielded\)|\(lit\)|hand|worn)"=brightmagenta&inverse
+
+# Bad:
+MENUCOLOR=" load(stone)?( |$)"=red&underline
+MENUCOLOR=" load(stone)? (.* )?(\(wielded\)|\(lit\)|hand|worn)"=red&inverse
+
+# Notice:
 MENUCOLOR=" bag .* tricks"=blue&underline
 MENUCOLOR=" wand .*[^!]canc"=blue&underline
 MENUCOLOR=" wand .* vanish"=blue&underline
 
-MENUCOLOR=" gold piece"=yellow
-MENUCOLOR=" valuable"=orange
-MENUCOLOR=" gems? .* hard"=yellow
+MENUCOLOR=" bag .* tricks (.* )?(\(wielded\)|\(lit\)|hand|worn)"=blue&inverse
+MENUCOLOR=" wand .*[^!]canc (.* )?(\(wielded\)|\(lit\)|hand|worn)"=blue&inverse
+MENUCOLOR=" wand .* vanish (.* )?(\(wielded\)|\(lit\)|hand|worn)"=blue&inverse
 
-#soft gems
-MENUCOLOR=" ([0-9]+|an?|gems? .*) (uncursed |cursed |blessed )?(dilithium|opal|garnet|jasper|agate|jet|obsidian|jade|citrine|chrysoberyl|amber|amethyst|fluorite|turquoise)(e?s)?( stones?| gems?| crystals?)?( named .*)?$"=orange
+# Gold:
+MENUCOLOR=" gold piece"=yellow&bold
+MENUCOLOR=" gold piece (.* )?(\(wielded\)|\(lit\)|hand|worn)"=yellow&inverse
 
-#hard gems
-MENUCOLOR=" ([0-9]+|an?|gems?.*) (uncursed |cursed |blessed )?(diamond|rub(y|ies)|jacinth|sapphire|black opal|emerald|topaz|aquamarine)(e?s)?( stones?| gems?)?( named .*)?$"=yellow
+# Spellcasting:
+MENUCOLOR="[a-zA-Z ]+ [0-9] +[a-z]+ +0%"=white
+MENUCOLOR="[a-zA-Z ]+ [0-9] +[a-z]+ +[1-9]%"=cyan
+MENUCOLOR="[a-zA-Z ]+ [0-9] +[a-z]+ +[12][0-9]%"=cyan
+MENUCOLOR="[a-zA-Z ]+ [0-9] +[a-z]+ +[3-6][0-9]%"=yellow
+MENUCOLOR="[a-zA-Z ]+ [0-9] +[a-z]+ +7[0-5]%"=yellow
+MENUCOLOR="[a-zA-Z ]+ [0-9] +[a-z]+ +7[6-9]%"=orange
+MENUCOLOR="[a-zA-Z ]+ [0-9] +[a-z]+ +8[0-9]%"=orange
+MENUCOLOR="[a-zA-Z ]+ [0-9] +[a-z]+ +9[0-9]%"=red
+MENUCOLOR="[a-zA-Z ]+ [0-9] +[a-z]+ +100%"=red
+MENUCOLOR="[a-zA-Z ]+ [0-9] +[a-z]+ +[0-9]+% +\(gone\)"=magenta
 
-MENUCOLOR=" 0%"=white
-MENUCOLOR=" [1-9]%"=cyan
-MENUCOLOR=" [12][0-9]%"=cyan
-MENUCOLOR=" [3-6][0-9]%"=yellow
-MENUCOLOR=" 7[0-5]%"=yellow
-MENUCOLOR=" 7[6-9]%"=orange
-MENUCOLOR=" 8[0-9]%"=orange
-MENUCOLOR=" 9[0-9]%"=red
-MENUCOLOR=" 100%"=red
-MENUCOLOR="[a-zA-Z ]+ [0-9]\*   [a-z]+ +[0-9]+%"=magenta
-
+# Enchance:
 MENUCOLOR="^ +[a-z -]+ +\[(Unskilled|Basic|Skilled|Expert|Master|Grand Master)\]$"=white
 MENUCOLOR="^ *[a-z] - +[a-z -]+ +\[(Unskilled|Basic|Skilled|Expert|Master|Grand Master)\]$"=green
 MENUCOLOR="^ +\* +[a-z -]+ +\[(Unskilled|Basic|Skilled|Expert|Master|Grand Master)\]$"=yellow
 MENUCOLOR="^ +# +[a-z -]+ +\[(Unskilled|Basic|Skilled|Expert|Master|Grand Master)\]$"=magenta
 
+# Menu fix:
 MENUCOLOR=" is empty. Do what?"=white
 MENUCOLOR="Put something into .*"=white
 MENUCOLOR="Take something out of .*"=white
 
-MENUCOLOR="unicorn horn.*(Unskilled|Basic|Skilled|Expert)"=white
-MENUCOLOR="Info on what a given key does."=white
-MENUCOLOR="Full list of keyboard commands."=white
-MENUCOLOR="altkeyhandler"=white
-MENUCOLOR="fruit.*\["=white
-
-MENUCOLOR=" (cursed|named C)($| )"=red
-MENUCOLOR=" (uncursed|named U)($| )"=white
-MENUCOLOR=" (blessed|named B)($| )"=green
-
-MENUCOLOR=" holy water"=cyan&bold
-MENUCOLOR=" blessed clear potion"=cyan&bold
-MENUCOLOR=" blessed potions? called water"=cyan&bold
-MENUCOLOR=" clear potions? named (holy|blessed|B)($| )"=cyan&bold
-MENUCOLOR=" potions? of water named (holy|blessed|B)($| )"=cyan&bold
-MENUCOLOR=" potions? called water named (holy|blessed|B)($| )"=cyan&bold
+# Water color:
+MENUCOLOR=" holy water"=brightcyan&bold
+MENUCOLOR=" blessed clear potion"=brightcyan&bold
+MENUCOLOR=" blessed potions? called water"=brightcyan&bold
+MENUCOLOR=" clear potions? named (holy|blessed|B)( |$)"=brightcyan&bold
+MENUCOLOR=" potions? of water named (holy|blessed|B)( |$)"=brightcyan&bold
+MENUCOLOR=" potions? called water named (holy|blessed|B)( |$)"=brightcyan&bold
 MENUCOLOR=" unholy water"=orange&bold
 MENUCOLOR=" cursed clear potion"=orange&bold
 MENUCOLOR=" cursed potions? called water"=orange&bold
-MENUCOLOR=" potions? called water named (unholy|cursed|C)($| )"=orange&bold
-
-MENUCOLOR="^worn"=white&inverse
-MENUCOLOR=" worn"=white&inverse
-MENUCOLOR="^blessed .* worn"=green&inverse
-MENUCOLOR=" blessed .* worn"=green&inverse
-# MENUCOLOR="^cursed .* worn"=red&inverse
-MENUCOLOR="^cursed .* \(being worn\)"=red&inverse
-MENUCOLOR=" cursed .* \(being worn\)"=red&inverse
-
-MENUCOLOR=" hand"=white&inverse
-MENUCOLOR=" blessed .* hand"=green&inverse
-MENUCOLOR=" cursed .* hand"=red&inverse
-MENUCOLOR="^hand"=white&inverse
-MENUCOLOR="^blessed .* hand"=green&inverse
-MENUCOLOR="^cursed .* hand"=red&inverse
+MENUCOLOR=" clear potions? named (unholy|cursed|C)( |$)"=orange&bold
+MENUCOLOR=" potions? of water named (unholy|cursed|C)( |$)"=orange&bold
+MENUCOLOR=" potions? called water named (ununholy|cursed|C)( |$)"=orange&bold
+MENUCOLOR=" uncursed clear potion"=cyan
+MENUCOLOR=" uncursed potions? called water"=cyan
+MENUCOLOR=" clear potions? named UC( |$)"=cyan
+MENUCOLOR=" potions? of water named UC( |$)"=cyan
+MENUCOLOR=" potions? called water named UC( |$)"=cyan
 
 # Messages
 # ------------------
@@ -318,10 +430,3 @@ SYMBOLS=S_ghost:8
 SYMBOLS=S_pool:~
 SYMBOLS=S_water:~
 SYMBOLS=S_lava:~
-
-# MSGTYPE
-# ------------------
-
-MSGTYPE=norep "THUD!"
-MSGTYPE=stop ".* picks up .* containing .*"
-MSGTYPE=stop ".* drops .* containing .*"
