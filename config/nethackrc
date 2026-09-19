@@ -79,7 +79,7 @@ OPTIONS=confirm,safe_pet,paranoid_confirmation:all
 OPTIONS=tombstone
 
 OPTIONS=dark_room,hilite_pet,hilite_pile,lit_corridor,sparkle
-OPTIONS=runmode:walk
+OPTIONS=runmode:teleport
 
 OPTIONS=packorder:$"=)[%?!/(+*`0_
 OPTIONS=fixinv,force_invmenu,perm_invent
