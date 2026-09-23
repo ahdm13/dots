@@ -217,7 +217,7 @@ MENUCOLOR=" (blessed|named B) (.* )?(\(wielded\)|\(lit\)|hand|worn)"=green&inver
 MENUCOLOR=" ((food |cram |K-|C-)ration|gunyoki)"=brightgreen
 MENUCOLOR=" (lembas wafer|melon|carrot|tins? .* spinach)"=brightgreen
 MENUCOLOR=" (.*[^,fd] )? oranges? [^gp]"=brightgreen
-MENUCOLOR=" pears?"=brightgreen
+MENUCOLOR=" pears?( |$)"=brightgreen
 MENUCOLOR=" (apple|banana|kelp|eucalyptus|garlic|wolfsbane)"=brightgreen
 MENUCOLOR=" slime mold"=brightgreen
 MENUCOLOR=" tins? of (gelatinous cube|acid blob|quivering blob)"=brightgreen
