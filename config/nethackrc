@@ -357,6 +357,7 @@ MENUCOLOR="^ +# +[a-z -]+ +\[(Unskilled|Basic|Skilled|Expert|Master|Grand Master
 MENUCOLOR=" is empty. Do what?"=white
 MENUCOLOR="Put something into .*"=white
 MENUCOLOR="Take something out of .*"=white
+MENUCOLOR="Just picked up:"=white
 
 # Water color:
 MENUCOLOR=" holy water"=brightcyan&bold
